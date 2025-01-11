@@ -1,0 +1,8 @@
+simpletransformers
+tensorboardX
+transformers
+flask
+torch
+onnxruntime
+onnx==1.16.1
+accelerate
