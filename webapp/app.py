@@ -6,8 +6,8 @@ import onnxruntime
 
 app = Flask(__name__)
 tokenizer = RobertaTokenizer.from_pretrained("roberta-base")
-#session = onnxruntime.InferenceSession("roberta-sequence-classification-9.onnx")
-session = onnxruntime.InferenceSession("roberta-sequence-classification-9-finetuned.onnx")
+session = onnxruntime.InferenceSession("roberta-sequence-classification-9.onnx")
+#session = onnxruntime.InferenceSession("roberta-sequence-classification-9-finetuned.onnx")
 
 def to_numpy(tensor):
     return (
