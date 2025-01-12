@@ -27,6 +27,10 @@ jobs:
 
     #- name: retrieve the model
     #  run: az ml model download -v --target-dir "." --model-id "roberta-sequence:1"
+    - name: Install hadolint
+      run: |
+        wget -O /usr/local/bin/hadolint https://github.com/hadolint/hadolint/releases/latest/download/hadolint-Linux-x86_64
+        chmod +x /usr/local/bin/hadolint
 
     - name: Lint Dockerfile
       run: hadolint Dockerfile
