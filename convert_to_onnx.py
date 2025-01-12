@@ -13,6 +13,7 @@ dummy_input = tokenizer("This is a sample input", return_tensors="pt")
 torch.onnx.export(
     model,
     (dummy_input["input_ids"], dummy_input["attention_mask"]),
+    #"webapp/roberta-sequence-classification-9.onnx",
     "webapp/roberta-sequence-classification-9.onnx",
     input_names=["input_ids", "attention_mask"],
     output_names=["logits"],
